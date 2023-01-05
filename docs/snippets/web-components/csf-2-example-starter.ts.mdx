@@ -1,0 +1,16 @@
+```ts
+// CSF 2
+import type { Meta, Story } from '@storybook/web-components';
+
+import { html } from 'lit-html';
+
+export default {
+  title: 'components/Button',
+  component: 'demo-button',
+};
+
+export const Primary = ({ primary }) => html`<demo-button ?primary=${primary}></demo-button>`;
+Primary.args = {
+  primary: true,
+};
+```

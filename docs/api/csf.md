@@ -270,6 +270,7 @@ In CSF 2, the named exports are always functions that instantiate a component, a
     'vue/csf-2-example-starter.ts-3.ts.mdx',
     'angular/csf-2-example-starter.ts.mdx',
     'web-components/csf-2-example-starter.js.mdx',
+    'web-components/csf-2-example-starter.ts.mdx',
   ]}
 />
 
@@ -284,10 +285,12 @@ Here's the CSF 3 equivalent:
 <CodeSnippets
   paths={[
     'common/csf-3-example-starter.js.mdx',
+    'web-components/csf-3-example-starter.js.mdx',
     'react/csf-3-example-starter.ts.mdx',
     'vue/csf-3-example-starter.ts-2.ts.mdx',
     'vue/csf-3-example-starter.ts-3.ts.mdx',
     'angular/csf-3-example-starter.ts.mdx',
+    'web-components/csf-3-example-starter.ts.mdx',
   ]}
 />
 
