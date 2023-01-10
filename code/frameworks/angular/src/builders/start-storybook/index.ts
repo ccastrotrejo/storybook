@@ -103,8 +103,8 @@ function commandBuilder(
       return standaloneOptions;
     }),
     switchMap((standaloneOptions) => runInstance(standaloneOptions)),
-    map(() => {
-      return { success: true };
+    map(({ port }) => {
+      return { success: true, info: { port } };
     })
   );
 }
@@ -129,10 +129,10 @@ async function setup(options: StorybookBuilderOptions, context: BuilderContext) 
   };
 }
 function runInstance(options: StandaloneOptions) {
-  return new Observable<void>((observer) => {
+  return new Observable<{ port: number }>((observer) => {
     // This Observable intentionally never complete, leaving the process running ;)
     buildDevStandalone(options as any).then(
-      () => observer.next(),
+      ({ port }) => observer.next({ port }),
       (error) => observer.error(buildStandaloneErrorHandler(error))
     );
   });
